@@ -50,12 +50,12 @@ def home5():
 def get_bot_response():    
     userText = request.args.get('msg')
     # to store the messages sent by chatbot 1
-    with open('C:\\Users\\bhatr\\OneDrive\\Desktop\\LearnPython\\app\\chatbot\\chatbot1.txt', mode='a', encoding='utf-8') as file:
+    with open('./chatbot1.txt', mode='a', encoding='utf-8') as file:
         # file.writelines("%s\n" % t for t in userText)
         file.writelines(userText+ '\n' )
     a=str(chatbot.get_response(userText))
     # to store the response messages of chatbot3 that is sent to chatbot1
-    with open('C:\\Users\\bhatr\\OneDrive\\Desktop\\LearnPython\\app\\chatbot\\chatbot3.txt', mode='a', encoding='utf-8') as file:
+    with open('./chatbot3.txt', mode='a', encoding='utf-8') as file:
         # file.writelines("%s\n" % t for t in userText)
         file.writelines(a+ '\n' )
     return a
